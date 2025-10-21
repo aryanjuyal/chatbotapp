@@ -8,13 +8,14 @@ st.title("gemini chat bot")
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
+    
 
 
 for msg in st.session_state.chat_history:
     if msg["role"] == "user":
-        st.markdown(f"🧑‍💻 **You:** {msg['content']}")
+        st.write(f" **USer:** {msg['content']}")
     else:
-        st.markdown(f"🤖 **Gemini:** {msg['content']}")
+        st.write(f" **Gemini:** {msg['content']}")
 
 
 prompt = st.text_input("Ask Gemini something:")
