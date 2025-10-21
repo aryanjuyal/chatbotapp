@@ -22,7 +22,7 @@ def gemini(prompt,image=None):
    return response.text
 
 
-
+# NOTES FOR FUTURE
 
 
  # config=types.GenerateContentConfig(
