@@ -2,7 +2,7 @@ from google import genai
 from PIL import Image
 
 
-client = genai.Client()
+client = genai.Client(api_key="GEMINI_API_KEY")
 
 def gemini(prompt,image=None):
    contents = [prompt]
