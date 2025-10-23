@@ -1,6 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, Form
 
-from bot import gemini
+from .bot import gemini
 
 app = FastAPI()
 
