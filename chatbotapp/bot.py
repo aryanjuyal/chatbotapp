@@ -10,7 +10,7 @@ api_key=os.getenv("GEMINI_API_KEy")
 
 
 
-client = genai.Client(api_key=api_key)
+client = genai.Client()
 
 def gemini(prompt,image=None):
    contents = [prompt]
