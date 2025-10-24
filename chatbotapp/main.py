@@ -4,6 +4,12 @@ from .bot import gemini
 
 app = FastAPI()
 
+
+
+@app.get("/")
+def home():
+    return {"message": "hello this is a gemini api"}
+
 @app.post("/chat")
 async def chat(prompt: str = Form(...), image: UploadFile = File(None)):
     
