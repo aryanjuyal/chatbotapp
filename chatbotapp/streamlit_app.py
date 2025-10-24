@@ -24,8 +24,8 @@ if st.button("Ask Gemini"):
         with st.spinner("Thinking..."):
             response = gemini(prompt if prompt else "Explain this image to me", uploaded_image)
 
-            st.session_state.chat_history.append({"role": "user", "content": prompt if prompt else 'Image'})
-            st.session_state.chat_history.append({"role": "assistant", "content": response})
+            st.session_state.chat_history.append({"role": "USER: ", "content": prompt if prompt else 'Image'})
+            st.session_state.chat_history.append({"role": "GEMINI: ", "content": response})
 
             st.success(response)
     else:
