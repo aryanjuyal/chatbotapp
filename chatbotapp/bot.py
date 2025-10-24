@@ -14,7 +14,7 @@ def gemini(prompt,image=None):
         img = Image.open(image)
         contents.append(img)
   
-    response = client.models.generate_content(
+   response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=contents
         
