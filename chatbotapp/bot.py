@@ -6,10 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 api_key=os.getenv("GEMINI_API_KEY")
-
-
-
-
 client = genai.Client()
 
 def gemini(prompt,image=None):
@@ -18,10 +14,7 @@ def gemini(prompt,image=None):
         img = Image.open(image)
         contents.append(img)
   
-
-
-    
-   response = client.models.generate_content(
+    response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=contents
         
