@@ -7,10 +7,7 @@ app = FastAPI()
 def base():
     return {"message": "This is my bot api"}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 11b9c3f681a7ad7ad1bb50c585de16a39b2d7bb5
 @app.post("/chat")
 async def chat(prompt: str = Form(...), image: UploadFile = File(None)):
     if image:
